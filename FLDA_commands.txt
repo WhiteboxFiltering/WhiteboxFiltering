@@ -1,0 +1,40 @@
+/usr/bin/time sage FLDA.py ../aes10_SEL_L5_D3/ -W 50 -s 0 -b 0 --masks 1 -NRN 0 -r 1 -b 0 -e 232384 |& tail -1000 >log_aes10_SEL_L5_D3_W50
+/usr/bin/time sage FLDA.py ../aes10_SEL_L5_D3/ -W 100 -s 0 -b 0 --masks 1 -NRN 0 -r 1 -b 0 -e 232384 |& tail -1000 >log_aes10_SEL_L5_D3_W100
+/usr/bin/time sage FLDA.py ../aes10_SEL_L5_D3/ -W 200 -s 0 -b 0 --masks 1 -NRN 0 -r 1 -b 0 -e 232384 |& tail -1000 >log_aes10_SEL_L5_D3_W200
+/usr/bin/time sage FLDA.py ../aes10_SEL_L5_D3/ -W 400 -s 0 -b 0 --masks 1 -NRN 0 -r 1 -b 0 -e 232384 |& tail -1000 >log_aes10_SEL_L5_D3_W400
+
+/usr/bin/time sage FLDA.py ../aes10_SEL_L5_D2/ -W 50 -s 0 -b 0 --masks 1 -NRN 0 -r 1 -b 0 -e 240800 |& tail -1000 >log_aes10_SEL_L5_D2_W50
+/usr/bin/time sage FLDA.py ../aes10_SEL_L5_D2/ -W 100 -s 0 -b 0 --masks 1 -NRN 0 -r 1 -b 0 -e 240800 |& tail -1000 >log_aes10_SEL_L5_D2_W100
+/usr/bin/time sage FLDA.py ../aes10_SEL_L5_D2/ -W 200 -s 0 -b 0 --masks 1 -NRN 0 -r 1 -b 0 -e 240800 |& tail -1000 >log_aes10_SEL_L5_D2_W200
+/usr/bin/time sage FLDA.py ../aes10_SEL_L5_D2/ -W 400 -s 0 -b 0 --masks 1 -NRN 0 -r 1 -b 0 -e 240800 |& tail -1000 >log_aes10_SEL_L5_D2_W400
+
+/usr/bin/time sage FLDA.py ../aes10_minq/ -W 50 -s 0 -b 0 --masks 1 -NRN 0 -r 1 -b 0 -e 167525 |& tail -1000 >log_aes10_minq_W50
+/usr/bin/time sage FLDA.py ../aes10_minq/ -W 100 -s 0 -b 0 --masks 1 -NRN 0 -r 1 -b 0 -e 167525 |& tail -1000 >log_aes10_minq_W100
+/usr/bin/time sage FLDA.py ../aes10_minq/ -W 200 -s 0 -b 0 --masks 1 -NRN 0 -r 1 -b 0 -e 167525 |& tail -1000 >log_aes10_minq_W200
+/usr/bin/time sage FLDA.py ../aes10_minq/ -W 400 -s 0 -b 0 --masks 1 -NRN 0 -r 1 -b 0 -e 167525 |& tail -1000 >log_aes10_minq_W400
+
+/usr/bin/time sage FLDA.py ../aes10_isw3/ -W 50 -s 0 -b 0 --masks 1 -NRN 0 -r 1 -b 0 -e 38898 |& tail -1000 >log_aes10_isw3_W50
+/usr/bin/time sage FLDA.py ../aes10_isw3/ -W 100 -s 0 -b 0 --masks 1 -NRN 0 -r 1 -b 0 -e 38898 |& tail -1000 >log_aes10_isw3_W100
+/usr/bin/time sage FLDA.py ../aes10_isw3/ -W 200 -s 0 -b 0 --masks 1 -NRN 0 -r 1 -b 0 -e 38898 |& tail -1000 >log_aes10_isw3_W200
+/usr/bin/time sage FLDA.py ../aes10_isw3/ -W 400 -s 0 -b 0 --masks 1 -NRN 0 -r 1 -b 0 -e 38898 |& tail -1000 >log_aes10_isw3_W400
+
+
+/usr/bin/time sage FLDA.py ../aes10_SEL_L5_D3/ -W 50 -s 0 -b 0 --masks 1 -NRN 1 -r 1 -b 0 -e 232384 |& tail -1000 >log_aes10_SEL_L5_D3_W50_withRNR
+/usr/bin/time sage FLDA.py ../aes10_SEL_L5_D3/ -W 100 -s 0 -b 0 --masks 1 -NRN 1 -r 1 -b 0 -e 232384 |& tail -1000 >log_aes10_SEL_L5_D3_W100_withRNR
+/usr/bin/time sage FLDA.py ../aes10_SEL_L5_D3/ -W 200 -s 0 -b 0 --masks 1 -NRN 1 -r 1 -b 0 -e 232384 |& tail -1000 >log_aes10_SEL_L5_D3_W200_withRNR
+/usr/bin/time sage FLDA.py ../aes10_SEL_L5_D3/ -W 400 -s 0 -b 0 --masks 1 -NRN 1 -r 1 -b 0 -e 232384 |& tail -1000 >log_aes10_SEL_L5_D3_W400_withRNR
+
+/usr/bin/time sage FLDA.py ../aes10_SEL_L5_D2/ -W 50 -s 0 -b 0 --masks 1 -NRN 1 -r 1 -b 0 -e 240800 |& tail -1000 >log_aes10_SEL_L5_D2_W50_withRNR
+/usr/bin/time sage FLDA.py ../aes10_SEL_L5_D2/ -W 100 -s 0 -b 0 --masks 1 -NRN 1 -r 1 -b 0 -e 240800 |& tail -1000 >log_aes10_SEL_L5_D2_W100_withRNR
+/usr/bin/time sage FLDA.py ../aes10_SEL_L5_D2/ -W 200 -s 0 -b 0 --masks 1 -NRN 1 -r 1 -b 0 -e 240800 |& tail -1000 >log_aes10_SEL_L5_D2_W200_withRNR
+/usr/bin/time sage FLDA.py ../aes10_SEL_L5_D2/ -W 400 -s 0 -b 0 --masks 1 -NRN 1 -r 1 -b 0 -e 240800 |& tail -1000 >log_aes10_SEL_L5_D2_W400_withRNR
+
+/usr/bin/time sage FLDA.py ../aes10_minq/ -W 50 -s 0 -b 0 --masks 1 -NRN 1 -r 1 -b 0 -e 167525 |& tail -1000 >log_aes10_minq_W50_withRNR
+/usr/bin/time sage FLDA.py ../aes10_minq/ -W 100 -s 0 -b 0 --masks 1 -NRN 1 -r 1 -b 0 -e 167525 |& tail -1000 >log_aes10_minq_W100_withRNR
+/usr/bin/time sage FLDA.py ../aes10_minq/ -W 200 -s 0 -b 0 --masks 1 -NRN 1 -r 1 -b 0 -e 167525 |& tail -1000 >log_aes10_minq_W200_withRNR
+/usr/bin/time sage FLDA.py ../aes10_minq/ -W 400 -s 0 -b 0 --masks 1 -NRN 1 -r 1 -b 0 -e 167525 |& tail -1000 >log_aes10_minq_W400_withRNR
+
+/usr/bin/time sage FLDA.py ../aes10_isw3/ -W 50 -s 0 -b 0 --masks 1 -NRN 1 -r 1 -b 0 -e 38898 |& tail -1000 >log_aes10_isw3_W50_withRNR
+/usr/bin/time sage FLDA.py ../aes10_isw3/ -W 100 -s 0 -b 0 --masks 1 -NRN 1 -r 1 -b 0 -e 38898 |& tail -1000 >log_aes10_isw3_W100_withRNR
+/usr/bin/time sage FLDA.py ../aes10_isw3/ -W 200 -s 0 -b 0 --masks 1 -NRN 1 -r 1 -b 0 -e 38898 |& tail -1000 >log_aes10_isw3_W200_withRNR
+/usr/bin/time sage FLDA.py ../aes10_isw3/ -W 400 -s 0 -b 0 --masks 1 -NRN 1 -r 1 -b 0 -e 38898 |& tail -1000 >log_aes10_isw3_W400_withRNR

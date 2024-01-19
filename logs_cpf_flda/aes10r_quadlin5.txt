@@ -1,0 +1,382 @@
++ CIRCUIT=circuits/aes10r_quadlin5.bin
+++ basename circuits/aes10r_quadlin5.bin
++ NAME=aes10r_quadlin5.bin
++ NAME=aes10r_quadlin5
++ FRNR_FLAGS=--output-friendly
++ TIME='/usr/bin/time -v'
++ DO_LDA=0
++ DO_FLDA=1
++ STOP_ON_KEY_MATCH=0
++ BYTEPOSE_LIST=(0 7)
++ MASKS=all
++ TRACES_BASE=traces-cpf/
++ TRACES_RAND=traces-rand/
++ echo CIRCUIT circuits/aes10r_quadlin5.bin
+CIRCUIT circuits/aes10r_quadlin5.bin
++ echo NAME aes10r_quadlin5
+NAME aes10r_quadlin5
++ test aes10r_quadlin5
++ test circuits/aes10r_quadlin5.bin
+++ which pypy3
++ PYPY3=/pypy3
++ mkdir traces-cpf/
+mkdir: cannot create directory ‘traces-cpf/’: File exists
++ true
++ mkdir traces-rand/
+mkdir: cannot create directory ‘traces-rand/’: File exists
++ true
++ WINDOW=100
++ WINDOW_RNR=250
++ T_NEED=312
++ T_PERGROUP=64
++ T_RAND=320
++ /usr/bin/time -v /pypy3 recordTracesCPF.py circuits/aes10r_quadlin5.bin traces-cpf/ -H 248 -B 64
+Tracing circuits/aes10r_quadlin5.bin on 1520 traces
+Saving to traces-cpf/aes10r_quadlin5
+splitting 0
+splitting 1
+splitting 2
+splitting 3
+splitting 4
+splitting 5
+splitting 6
+splitting 7
+splitting 8
+splitting 9
+splitting 10
+splitting 11
+splitting 12
+splitting 13
+splitting 14
+splitting 15
+splitting 16
+splitting 17
+splitting 18
+splitting 19
+splitting 20
+splitting 21
+splitting 22
+splitting 23
+	Command being timed: "/pypy3 recordTracesCPF.py circuits/aes10r_quadlin5.bin traces-cpf/ -H 248 -B 64"
+	User time (seconds): 29.35
+	System time (seconds): 1.07
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:30.46
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 104704
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 16446
+	Voluntary context switches: 11
+	Involuntary context switches: 792
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 2008896
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
++ /usr/bin/time -v /pypy3 splitTracesCPF.py traces-cpf//aes10r_quadlin5/
+Creating trace set for byte position  0: most common char b'G' (332/1536 = 21.6%)
+Creating trace set for byte position  1: most common char b'\x90' (317/1536 = 20.6%)
+Creating trace set for byte position  2: most common char b'\x90' (315/1536 = 20.5%)
+Creating trace set for byte position  3: most common char b'\x90' (321/1536 = 20.9%)
+Creating trace set for byte position  4: most common char b'G' (332/1536 = 21.6%)
+Creating trace set for byte position  5: most common char b'\x90' (317/1536 = 20.6%)
+Creating trace set for byte position  6: most common char b'G' (333/1536 = 21.7%)
+Creating trace set for byte position  7: most common char b'G' (331/1536 = 21.5%)
+Creating trace set for byte position  8: most common char b'G' (332/1536 = 21.6%)
+Creating trace set for byte position  9: most common char b'\x90' (316/1536 = 20.6%)
+Creating trace set for byte position 10: most common char b'\x90' (315/1536 = 20.5%)
+Creating trace set for byte position 11: most common char b'\x90' (319/1536 = 20.8%)
+Creating trace set for byte position 12: most common char b'G' (331/1536 = 21.5%)
+Creating trace set for byte position 13: most common char b'G' (330/1536 = 21.5%)
+Creating trace set for byte position 14: most common char b'\x90' (320/1536 = 20.8%)
+Creating trace set for byte position 15: most common char b'G' (330/1536 = 21.5%)
+	Command being timed: "/pypy3 splitTracesCPF.py traces-cpf//aes10r_quadlin5/"
+	User time (seconds): 0.30
+	System time (seconds): 0.23
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.54
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 77568
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 9705
+	Voluntary context switches: 6
+	Involuntary context switches: 39
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
++ /usr/bin/time -v /pypy3 -m wboxkit.attacks.trace -t 320 --seed 0 circuits/aes10r_quadlin5.bin traces-rand/
+Tracing circuits/aes10r_quadlin5.bin on 320 traces
+Saving to traces-rand/aes10r_quadlin5
+splitting 0
+splitting 1
+splitting 2
+splitting 3
+splitting 4
+	Command being timed: "/pypy3 -m wboxkit.attacks.trace -t 320 --seed 0 circuits/aes10r_quadlin5.bin traces-rand/"
+	User time (seconds): 6.25
+	System time (seconds): 0.19
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.45
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 89984
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 12807
+	Voluntary context switches: 2
+	Involuntary context switches: 127
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 418520
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
++ /usr/bin/time -v /pypy3 transposeTraces.py traces-rand//aes10r_quadlin5/
+Transposing traces...
+
+[1A[2KThe file "nodeVectors.bin" containing all the node vectors has been created.
+	Command being timed: "/pypy3 transposeTraces.py traces-rand//aes10r_quadlin5/"
+	User time (seconds): 12.46
+	System time (seconds): 0.22
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:12.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 196992
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 39743
+	Voluntary context switches: 5
+	Involuntary context switches: 95
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 206008
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
++ /usr/bin/time -v sage RNR.py traces-rand//aes10r_quadlin5 -W 250
+Processing trace folder traces-rand/aes10r_quadlin5
+Opening NodeVectors.bin
+[✓] Opened 2636832 nodes in 0h01m23.59s
+[.] Converting the node vectors into a matrix
+[✓] Converted the node vectors into a matrix in 0h03m40.44s
+Removing redundant nodes for window size W=250 f=30  on T=280 traces
+
+[1A[2K[✓] removed XOR nodes: 1453698 (55.13%), remaining: 1183134, time elapsed: 0h00m59.393634s
+
+
+[1A[2K[1A[2K	Command being timed: "sage RNR.py traces-rand//aes10r_quadlin5 -W 250"
+	User time (seconds): 279.36
+	System time (seconds): 5.73
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:43.75
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 12822344
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1117
+	Minor (reclaiming a frame) page faults: 3413494
+	Voluntary context switches: 4943
+	Involuntary context switches: 5820
+	Swaps: 0
+	File system inputs: 229360
+	File system outputs: 11976
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
++ pattern='traces-rand//aes10r_quadlin5/NRN_W*.pkl'
++ bigNRN=($pattern)
++ echo 'bigRNR: traces-rand//aes10r_quadlin5/NRN_W0250.pkl'
+bigRNR: traces-rand//aes10r_quadlin5/NRN_W0250.pkl
++ for BYTEPOS in "${BYTEPOSE_LIST[@]}"
+++ printf byte%02x 0
++ SUB=byte00
++ /usr/bin/time -v /pypy3 transposeTraces.py traces-cpf//aes10r_quadlin5.byte00/
+Transposing traces...
+
+[1A[2KThe file "nodeVectors.bin" containing all the node vectors has been created.
+	Command being timed: "/pypy3 transposeTraces.py traces-cpf//aes10r_quadlin5.byte00/"
+	User time (seconds): 12.04
+	System time (seconds): 0.26
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:12.57
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 200320
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 581
+	Minor (reclaiming a frame) page faults: 40533
+	Voluntary context switches: 1642
+	Involuntary context switches: 449
+	Swaps: 0
+	File system inputs: 329320
+	File system outputs: 216304
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
++ /usr/bin/time -v sage RNR.py -NRN traces-rand//aes10r_quadlin5/NRN_W0250.pkl --save-relations traces-cpf//aes10r_quadlin5.byte00/ -W 250
+Processing trace folder traces-cpf/aes10r_quadlin5.byte00
+reduced NRN using extra file: 2636832 -> 1183134
+Opening NodeVectors.bin
+[✓] Opened 2636832 nodes in 0h01m15.66s
+[.] Converting the node vectors into a matrix
+[✓] Converted the node vectors into a matrix in 0h03m36.71s
+Removing redundant nodes for window size W=250 f=30  on T=280 traces
+
+[1A[2K[✓] removed XOR nodes: 1557377 (59.06%), remaining: 1079455, time elapsed: 0h00m57.234802s
+
+
+[1A[2K[1A[2K	Command being timed: "sage RNR.py -NRN traces-rand//aes10r_quadlin5/NRN_W0250.pkl --save-relations traces-cpf//aes10r_quadlin5.byte00/ -W 250"
+	User time (seconds): 274.85
+	System time (seconds): 5.54
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:38.86
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 12833960
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2329
+	Minor (reclaiming a frame) page faults: 3511761
+	Voluntary context switches: 8344
+	Involuntary context switches: 3948
+	Swaps: 0
+	File system inputs: 491672
+	File system outputs: 37144
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
++ for BYTEPOS in "${BYTEPOSE_LIST[@]}"
+++ printf byte%02x 7
++ SUB=byte07
++ /usr/bin/time -v /pypy3 transposeTraces.py traces-cpf//aes10r_quadlin5.byte07/
+Transposing traces...
+
+[1A[2KThe file "nodeVectors.bin" containing all the node vectors has been created.
+	Command being timed: "/pypy3 transposeTraces.py traces-cpf//aes10r_quadlin5.byte07/"
+	User time (seconds): 19.10
+	System time (seconds): 0.27
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:19.62
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 200832
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 536
+	Minor (reclaiming a frame) page faults: 40692
+	Voluntary context switches: 1584
+	Involuntary context switches: 482
+	Swaps: 0
+	File system inputs: 317088
+	File system outputs: 216304
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
++ /usr/bin/time -v sage RNR.py -NRN traces-rand//aes10r_quadlin5/NRN_W0250.pkl --save-relations traces-cpf//aes10r_quadlin5.byte07/ -W 250
+Processing trace folder traces-cpf/aes10r_quadlin5.byte07
+reduced NRN using extra file: 2636832 -> 1183134
+Opening NodeVectors.bin
+[✓] Opened 2636832 nodes in 0h01m20.86s
+[.] Converting the node vectors into a matrix
+[✓] Converted the node vectors into a matrix in 0h03m51.60s
+Removing redundant nodes for window size W=250 f=30  on T=280 traces
+
+[1A[2K[✓] removed XOR nodes: 1557377 (59.06%), remaining: 1079455, time elapsed: 0h00m58.789062s
+
+
+[1A[2K[1A[2K	Command being timed: "sage RNR.py -NRN traces-rand//aes10r_quadlin5/NRN_W0250.pkl --save-relations traces-cpf//aes10r_quadlin5.byte07/ -W 250"
+	User time (seconds): 290.98
+	System time (seconds): 5.75
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:54.95
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 12822792
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1293
+	Minor (reclaiming a frame) page faults: 3512661
+	Voluntary context switches: 4921
+	Involuntary context switches: 5472
+	Swaps: 0
+	File system inputs: 199672
+	File system outputs: 37128
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
++ [[ 0 == \1 ]]
++ [[ 1 == \1 ]]
++ /usr/bin/time -v sage FRNR.py --output-friendly traces-rand//aes10r_quadlin5/ --save-relations -W 100
+Filtered Redundant Node Removal with the sliding window... W=101 t=30 f=181
+
+
+
+Opening NodeVectors.bin
+Killed
+ERROR conda.cli.main_run:execute(124): `conda run sage FRNR.py --output-friendly traces-rand//aes10r_quadlin5/ --save-relations -W 100` failed. (See above for error)
+Command exited with non-zero status 137
+	Command being timed: "sage FRNR.py --output-friendly traces-rand//aes10r_quadlin5/ --save-relations -W 100"
+	User time (seconds): 89.87
+	System time (seconds): 6.47
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:36.07
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13468896
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2175
+	Minor (reclaiming a frame) page faults: 3575376
+	Voluntary context switches: 9029
+	Involuntary context switches: 35724
+	Swaps: 0
+	File system inputs: 692416
+	File system outputs: 568
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 137
